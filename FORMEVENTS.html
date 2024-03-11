@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
+        <button type="reset">reset</button>
+      </form> -->
+
+
+      <input type="color" id="color">
+
+
+      <p id='print'>Color in value: </p>
+
+      <style>
+        /* form{
+            border: 2px black;
+            width: 300px;
+            background-color: green;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        } */
+      </style>
+
+
+<script>
+  
+
+
+//   var myForm = document.getElementById('myForm');
+
+// myForm.addEventListener('submit', function(event) {
+//     alert('Form submitted.');
+// });
+
+
+// myForm.addEventListener('reset', function() {
+//     alert('Form reset.');
+// });
+
+// let input = document.getElementById('username')
+// username.addEventListener('focus',function(){
+//     console.log('fouces input');
+// })
+
+// let pswd = document.getElementById('password');
+// pswd.addEventListener('focus',function(){
+//     console.log('fouces password');
+// })
+
+
+
+
+
+let colorvalue = document.getElementById('color');
+let printv =document.getElementById('print');
+colorvalue.addEventListener('change',function(){
+   printv.innerText ='color in value: '+ colorvalue.value;
+})
+
+</script>
+</body>
+</html>

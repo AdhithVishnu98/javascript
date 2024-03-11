@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// constructor is mainly used to use the method from the other class
+
+        class Animal {
+  constructor(Name,height,weight) {
+    this.Name = Name;
+    this.Height =height;
+    this.Weight =weight
+  }
+           
+  sound() {
+    console.log(`${this.Name} makes a sound`);
+  }
+  size(){
+      console.log(`${this.Name} Height is ${this.Height}Cm , Weight is ${this.Weight}Kg`)  
+  }
+  
+
+}
+
+class Dog extends Animal {
+  // Dog class inherits from Animal
+  constructor(Name,Breed,height,weight) { 
+    super(Name,height,weight); 
+    this.breed = Breed;
+    this.name = Name;
+    this.height =height;
+    this.Weight= weight;
+  }
+
+  bark() {
+    console.log(`${this.name} barks loudly! ,Breed is ${this.breed}`);
+  }
+}
+
+// Creating instances
+const myAnimal = new Animal('Domestic Animal');
+const myDog = new Dog('Tommy','Lab',100,30);
+
+// Using methods
+myAnimal.sound(); // Output: Generic Animal makes a sound
+myDog.sound();    // Output: Buddy makes a sound
+myDog.bark();     
+myDog.size();   // Output: Buddy barks loudly!
+
+    </script>
+</body>
+</html>

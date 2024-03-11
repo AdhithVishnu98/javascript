@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event Example</title>
+</head>
+
+<body>
+
+    <button id="myButton">Click me!</button>
+
+    <p id='click'>CLICK</p>
+
+    <p id='dblclick'>DoubleClick</p>
+
+    <p id='mousedown'>mousedown</p>
+
+    <p id='mouseup'>mouseup</p>
+
+    <p id="mousemove">mousemove</p>
+
+    <p id="mouseenter">mouseenter</p>
+
+    
+    <p id="mouseleave">mouseleave</p>
+
+
+    
+
+    <script>
+        // Get the button element by its ID
+        var myButton = document.getElementById('myButton');
+
+        // Define a function to be executed when the button is clicked
+        function handleClick() {
+            alert('Button clicked!');
+        }
+        handleClick();
+
+
+        // Attach the handleClick function to the onclick event of the button
+        myButton.onclick = handleClick;
+
+
+
+
+
+
+        // click
+        let click = document.getElementById('click');
+        
+        click.addEventListener('click',function(){
+            console.log('click event is trigger');
+        })
+
+
+
+
+
+
+        //double click
+        var dblclick = document.getElementById('dblclick')
+
+        dblclick.addEventListener('dblclick', function () {
+            console.log('Double-click event triggered.');
+        });
+        //Occurs when the mouse button is pressed down over an element.
+        var mousedown = document.getElementById('mousedown')
+
+        mousedown.addEventListener('mousedown', function () {
+            console.log('Mouse down event triggered.');
+        });
+        //Occurs when the mouse button is released over an element.
+        var mouseup = document.getElementById('mouseup');
+
+        mouseup.addEventListener('mouseup', function () {
+            console.log('Mouse up event triggered.');
+        });
+
+
+
+
+
+
+
+        //Occurs when the mouse pointer is moved over an element.
+        var mousemove = document.getElementById('mousemove');
+
+        mousemove.addEventListener('mousemove', function () {
+            console.log('Mouse move event triggered.');
+        });
+
+
+
+
+        //Occurs when the mouse pointer enters the area of an element.
+        var mouseenter =document.getElementById('mouseenter')
+        mouseenter.addEventListener('mouseenter', function () {
+            console.log('Mouse leave event triggered.');
+        });
+
+
+
+        //Occurs when the mouse pointer leaves the area of an element.
+        var mouseleave =document.getElementById('mouseleave')
+        mouseleave.addEventListener('mouseleave', function () {
+            console.log('Mouse enter event triggered.');
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+<style>
+    p{
+        width: 100px;
+        height: 10vh;
+        background-color: green;
+        color: aliceblue;
+        font-size: x-large;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 50px;
+        
+    }
+</style>
+
+</body>
+
+</html>

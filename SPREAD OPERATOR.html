@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Array1 = [1, 2, 3, 4, 5];
+        const Array2 = [6, 7, 8, 9, 10];
+
+        let JoinArray = Array1.concat(Array2);
+
+        let Array12 =[0,1,2,...Array1,...Array2]
+        console.log(Array12);
+
+
+        let object1 = {
+            name: 'krithick',
+            age: 21,
+        };
+
+        let object2 = {
+            city: 'Dhaka',
+            country: 'Bangladesh',
+        };
+
+        let details = {
+            RollNo: 12120,
+            ...object1,
+            ...object2
+        };
+        
+        console.log(details);
+    </script>
+</body>
+
+</html>

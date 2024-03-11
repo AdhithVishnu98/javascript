@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events Example</title>
+    <style>
+        body {
+            height: 200vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Open the browser console to see the event logs.</p>
+
+
+    <p>Rotate your device to see the orientation change event in action.</p>
+
+    <script>
+
+        alert('hello')
+        // Load event
+        window.addEventListener('load', function () {
+            console.log('Page fully loaded.');
+        });
+
+        // Unload event
+        window.addEventListener('unload', function () {
+            console.log('Page is being unloaded.');
+        });
+
+        // Resize event
+        window.addEventListener('resize', function () {
+            console.log('Window resized.');
+        });
+
+        // Scroll event
+        window.addEventListener('scroll', function () {
+            console.log('Page scrolled.');
+        });
+
+        // Beforeunload event
+        window.addEventListener('beforeunload', function (event) {
+            event.returnValue = 'Are you sure you want to leave?';
+        });
+
+        // Orientationchange event
+        window.addEventListener('orientationchange', function () {
+            console.log('Orientation changed.');
+        });
+
+
+        window.addEventListener('online', function () {
+            console.log('Online event triggered.');
+        });
+
+        window.addEventListener('offline', function () {
+            console.log('Offline event triggered.');
+        });
+
+
+        window.addEventListener('error', function (event) {
+            console.error('Error occurred:', event.error);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM content loaded.');
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

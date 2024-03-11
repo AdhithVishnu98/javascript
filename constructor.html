@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //  Factory function ?
+
+        /* A factory function is a function that returns an object. 
+        It is a way to create and initialize objects in JavaScript. 
+        Instead of using a class or a constructor function, 
+        you can use a factory function to encapsulate the object creation 
+        process.  */
+
+
+    //    const some =    
+    function personFactory(name){
+     
+       return{  
+           talk(){
+                
+                   return `hello this is ${name}`;
+            }     
+          } 
+        
+        }
+
+       
+       
+
+        const me = personFactory("Factory1function");   //" creating an object  me by invoking the personFactory function,
+        const me1 = personFactory("Factory2function");
+        const me2 = personFactory("Factory3function");
+        const me3 = personFactory("Factory4function");
+        const me4 = personFactory("Factory5function");
+
+      
+        console.log(me.talk());
+         console.log(me1.talk());
+         console.log(me2.talk());
+         console.log(me3.talk());
+         console.log(me4.talk());
+     
+
+
+
+
+
+
+
+
+
+  ///////////////  Factory function shrortcut return ///////////////////
+
+        
+                 // camelcase
+        function createPerson(name,hobby,age) {
+
+          return {
+           Name: name, //remove name [Es6]
+                Hobby: hobby, // remove hobby [Es6]
+                Age:age,
+                greeting(){
+
+                   document.write(`My name is ${this.Name}, I love ${this.Hobby} ,then age is ${this.Age}`+"<br>");
+                }
+            };
+            
+
+        };
+
+
+        let krithick = createPerson("krithick", "cricket",18 );
+        let krithick1 = createPerson("varshan", "tea",22);
+     //let affect = greeting("sam","tennis",32); // it can't affect 
+        krithick1.greeting();
+        krithick.greeting();
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+        /////////// Constructor Function   ?//////////////////////
+
+        /* A constructor function is a special type of function in JavaScript 
+        that is used to create and initialize objects. It is typically used in 
+        conjunction with the new keyword to create instances of a particular 
+        type of object. Constructor functions are a part of the classical 
+        inheritance model in JavaScript.  */
+
+
+        
+                // Pascal Case
+
+                function Person(name, love) {
+                 
+                    this.name = name;
+                    this.love = love;
+                    this.about = function () {
+                       document.write (`My name is ${this.name} and i love ${love}`);
+                    };
+                    
+               
+                };
+
+                // new create an empty object and return the this 
+                let person1 = new Person("Constructor1", "ciricket");
+                let person2 = new Person("Constructor2", "Anime" );
+                let person3 = new Person("Constructor3", "Music");
+                person2.about();
+                person1.about();
+                person3.about();
+                
+            
+
+                
+    </script>
+</body>
+
+</html>

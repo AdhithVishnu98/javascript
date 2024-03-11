@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Define a class named 'Person'
+        class Person {
+
+            // Constructor method to initialize object properties
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // Method to display information about the person
+            displayInfo() {
+                console.log(`Name: ${this.name}, Age: ${this.age}`);
+            }
+
+
+        }
+
+        // Create an instance of the 'Person' class
+        const person1 = new Person("John Doe", 25);
+        const person2 = new Person("krithick", 21);
+        const person3 = new Person("varshan", 24);
+        const person4 = new Person("anu", 20);
+        const person5 = new Person("shiva", 19);
+        // Call the method to display information
+        person1.displayInfo();
+        person2.displayInfo();
+        person3.displayInfo();
+        person4.displayInfo();
+        person5.displayInfo();
+
+
+
+
+
+
+
+
+
+/// parent class
+        
+        class School {
+            constructor(name, age, roll) {
+                this.name = name; 
+                this.age = age;
+                this.roll = roll;
+            }
+            print() {
+                console.log(`Name :${this.name} ,Age : ${this.age},roll :${this.roll}`);
+            }
+        }
+
+        
+        const student1 = new School("krithick", 21, 20002);
+        student1.print();
+
+
+
+
+
+
+// child class
+
+     class UpdateDetails extends School {
+            constructor(name, age, roll, mobileNo, address) {
+                // super keyword
+                super(name, age, roll);
+                this.mob = mobileNo;
+                this.address = address;
+            }
+
+            display() {
+                document.write(`Full Details of Student Name :${this.name}, Age :${this.age}, 
+       ,roll :${this.roll}, MobileNo :${this.mob}, Address :${this.address} `)
+            }
+
+        }
+
+
+
+
+        const student2 = new UpdateDetails("shivu", 21, 22202010, 9942533139, "afsdfasdf,  asdfasdfasdfasdfa-1230")
+        student2.display();
+    </script>
+
+
+
+
+
+</body>
+
+</html>

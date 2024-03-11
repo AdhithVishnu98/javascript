@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+<div id="div">this is the word is have to cut copy and</div>
+
+    <script>
+        
+        document.addEventListener('keypress',function(event){
+            if(event.keyCode=='13'){
+                console.log('enter');
+            }
+        })
+
+
+document.addEventListener('keydown',function(event){
+    console.log('key value :'+event.keyCode);
+})
+
+document.addEventListener('keyup',function(event){
+    console.log(String.fromCharCode(event.keyCode))
+})
+
+        var div = document.getElementById('div');
+
+        div.addEventListener('cut', function (event) {
+            console.log('Cut event triggered.');
+        });
+
+        div.addEventListener('copy', function (event) {
+            console.log('Copy event triggered.');
+        });
+
+        div.addEventListener('paste', function (event) {
+            console.log('Paste event triggered.');
+        });
+        
+    </script>
+
+
+
+<style>
+    #div{
+        height: 200px;
+        width: 200px;
+        background-color: green;
+
+    }
+</style>
+</body>
+
+</html>

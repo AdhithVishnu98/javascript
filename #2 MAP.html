@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        order = [{
+                table: 1,
+                item: "pizza",
+                qty: 2
+            },
+            {
+                table: 2,
+                item: "soda",
+                qty: 3
+            },
+            {
+                table: 3,
+                item: 'Burger',
+                qty: 4
+            }
+        ]
+
+
+        function readfood(food){
+
+            let chef = order.map((e)=>{
+             if (e.item==food){
+               
+                console.log(`${food} is read`);
+             }
+             else{
+                console.log(` Table: ${e.table} wait for sometimes`);
+             }
+        });
+          
+        }
+
+        readfood('pizza');
+       
+
+              
+    //.filter(orderitem => orderitem.item === fooditem)  
+         //only for that particular value
+         // using the filter method
+
+
+    </script>
+</body>
+
+</html>

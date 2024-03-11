@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Static Collection Example</title>
+</head>
+
+<body>
+    <div class="example">Element 1</div>
+    <div class="example">Element 2</div>
+    <div class="example">Element 3</div>
+
+
+
+    <ol class="name">
+        <li>Hello</li>
+        <li>Hii</li>
+        <li>Bye</li>
+        <li>Welcome</li>
+        <li>Idly</li>
+    </ol>
+    <script>
+        // Static NodeList
+        var NodeList = document.querySelectorAll('.example');
+        console.log(NodeList);
+
+        // Output initial length
+        console.log("Before Adding:" + NodeList.length); // Outputs: 3
+
+        // Adding a new element dynamically
+        var newElement = document.createElement('div');
+        newElement.className = 'example';
+        newElement.textContent = 'Element 4';
+        document.body.appendChild(newElement);
+
+        // Output unchanged length (static NodeList does not update)
+        console.log("After Adding:" + NodeList.length); // Outputs: 3 (does not update automatically)
+
+
+
+
+
+
+        // live 
+
+
+        var tagName = document.getElementsByTagName('div');
+        console.log("TagName :" + tagName.length);
+
+
+        var HTMLCollection = document.getElementsByClassName('example');
+        console.log("ClassName :" + HTMLCollection.length)
+    
+
+         console.log(tagName[1].innerText);
+
+
+        for (var i = 0; i < tagName.length; i++) {
+            tagName[i].style.backgroundColor = 'yellow';
+        };
+     
+
+
+
+
+        
+
+var elements = document.getElementsByClassName('name');
+
+for(let i =0;i<=elements.length;i++){
+    console.log(elements[i].textContent);
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
